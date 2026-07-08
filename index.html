@@ -20,6 +20,7 @@
         <li><a href="#home">首页</a></li>
         <li><a href="#about">关于</a></li>
         <li><a href="#projects">作品</a></li>
+        <li><a href="#process">过程</a></li>
         <li><a href="#contact">联系</a></li>
       </ul>
     </div>
@@ -50,7 +51,7 @@
           <li>歌词同步显示</li>
         </ul>
         <div class="links">
-          <a class="btn small" href="#">下载 exe</a>
+          <a class="btn small" href="https://github.com/yanpgxue/Snow_Player/releases/download/v1.0/snow-player.exe" target="_blank">下载 exe</a>
           <a class="btn small ghost" href="https://github.com/yanpgxue">源码</a>
         </div>
       </div>
@@ -75,6 +76,48 @@
         <span class="tag">在这里</span>
         <h3>你的下一个作品</h3>
         <p>复制上面任意一个 <code>.card</code> 块，改文字和链接就能继续加项目。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="section">
+    <h2>创作过程</h2>
+    <p class="proc-intro">以 Snow Player 为例，从想法到成品的 5 个步骤 👇</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <h3>1. 灵感来源</h3>
+          <p>市面上的音乐 App 各自为政，想听不同平台的歌得来回切换。于是想自己做一个能聚合多平台音乐的桌面播放器。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <h3>2. 技术选型</h3>
+          <p>用 Python 写逻辑，界面用 PySide6（Qt 的 Python 绑定），跨平台、组件丰富，适合做桌面应用。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <h3>3. 多源搜索</h3>
+          <p>接入酷狗、网易云、酷我、QQ音乐的非官方接口，输入歌名就能一次搜出四个平台的结果。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <h3>4. 播放与下载</h3>
+          <p>双击歌曲名即时试听，支持换背景图；歌词实时同步显示，听歌体验更完整。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <h3>5. 打包发布</h3>
+          <p>用 PyInstaller 把脚本打成 exe，再用 Inno Setup 做成可安装 / 卸载的安装包，方便分享给别人。</p>
+        </div>
       </div>
     </div>
   </section>
