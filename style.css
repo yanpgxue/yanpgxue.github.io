@@ -115,3 +115,7 @@ footer { text-align: center; padding: 34px; color: #4a7794; position: relative; 
   .hero h1 { font-size: 1.9rem; }
   nav ul { gap: 14px; font-size: .9rem; }
 }
+.dl-note { margin-top: 10px; font-size: .82rem; color: #d97706; }
+.qr { margin-top: 14px; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.qr img { width: 130px; height: 130px; border-radius: 10px; background: #fff; padding: 6px; box-shadow: 0 4px 14px rgba(70,140,200,.2); }
+.qr span { font-size: .8rem; color: #40607a; }
