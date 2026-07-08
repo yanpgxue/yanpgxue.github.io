@@ -1,0 +1,117 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  /* 蓝天渐变背景 */
+  background: linear-gradient(180deg, #aee3ff 0%, #cdeeff 40%, #eaf8ff 100%);
+  background-attachment: fixed;
+  color: #1f3a52;
+  line-height: 1.7;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* 飘动的云朵 */
+.cloud {
+  position: fixed;
+  background: #fff;
+  border-radius: 100px;
+  opacity: .85;
+  filter: blur(.5px);
+  z-index: 0;
+  pointer-events: none;
+}
+.cloud::before, .cloud::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+}
+.cloud.c1 { width: 160px; height: 46px; top: 12%; left: -200px; animation: drift 38s linear infinite; }
+.cloud.c2 { width: 110px; height: 34px; top: 30%; left: -200px; animation: drift 52s linear infinite; animation-delay: -10s; opacity:.7;}
+.cloud.c3 { width: 200px; height: 56px; top: 55%; left: -260px; animation: drift 64s linear infinite; animation-delay: -25s; }
+.cloud.c4 { width: 130px; height: 40px; top: 75%; left: -200px; animation: drift 46s linear infinite; animation-delay: -15s; opacity:.75;}
+.cloud::before { width: 70%; height: 150%; top: -60%; left: 12%; }
+.cloud::after  { width: 50%; height: 130%; top: -45%; right: 14%; }
+@keyframes drift {
+  from { transform: translateX(0); }
+  to   { transform: translateX(110vw); }
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* 导航 */
+nav {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(255,255,255,.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.7);
+}
+.nav-inner {
+  max-width: 960px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px;
+}
+.logo { font-weight: 800; color: #1c85d6; letter-spacing: .5px; }
+nav ul { display: flex; gap: 22px; list-style: none; }
+nav a:hover { color: #1c85d6; }
+
+/* 首屏 */
+.hero {
+  max-width: 960px; margin: 0 auto;
+  padding: 100px 20px 80px; text-align: center;
+  position: relative; z-index: 1;
+}
+.hero h1 { font-size: 2.6rem; color: #123; }
+.accent { color: #1c85d6; }
+.sub { color: #3f6b8a; margin: 14px 0 30px; font-size: 1.05rem; }
+
+.btn {
+  display: inline-block; padding: 13px 30px;
+  background: linear-gradient(135deg, #46b4ff, #1c85d6);
+  color: #fff; font-weight: 700;
+  border-radius: 30px; transition: .2s;
+  box-shadow: 0 8px 20px rgba(28,133,214,.35);
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(28,133,214,.45); }
+.btn.small { padding: 9px 20px; font-size: .9rem; }
+.btn.ghost { background: #fff; color: #1c85d6; border: 1px solid #a9d8f5; box-shadow: none; }
+.btn.ghost:hover { background: #eaf6ff; }
+
+/* 区块 */
+.section { max-width: 960px; margin: 0 auto; padding: 55px 20px; position: relative; z-index: 1; }
+.section h2 { font-size: 1.7rem; margin-bottom: 24px; color: #123; }
+
+/* 卡片（白色毛玻璃） */
+.card {
+  display: flex; gap: 26px; align-items: center;
+  background: rgba(255,255,255,.78);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,.9);
+  border-radius: 18px; padding: 26px; margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(70,140,200,.15);
+}
+.card.featured { border: 2px solid #7cc4f7; }
+.card-text { flex: 1; }
+.tag {
+  display: inline-block; font-size: .75rem; color: #1478c4;
+  background: #e3f3ff; padding: 4px 12px;
+  border-radius: 20px; margin-bottom: 12px; font-weight: 600;
+}
+.card h3 { font-size: 1.35rem; margin-bottom: 10px; color: #123; }
+.card p { color: #40607a; }
+.feats { margin: 14px 0 18px 18px; color: #40607a; font-size: .94rem; }
+.feats li { margin: 4px 0; }
+.links { display: flex; gap: 12px; }
+.card-img { flex: 0 0 260px; }
+.card-img img { width: 100%; border-radius: 12px; box-shadow: 0 6px 16px rgba(70,140,200,.25); display:block; }
+
+/* 页脚 */
+footer { text-align: center; padding: 34px; color: #4a7794; position: relative; z-index: 1; }
+
+@media (max-width: 680px) {
+  .card { flex-direction: column; }
+  .card-img { flex: none; width: 100%; }
+  .hero h1 { font-size: 1.9rem; }
+  nav ul { gap: 14px; font-size: .9rem; }
+}
